@@ -10,50 +10,50 @@ require('pry')
 
   customer1 = Customer.new({
     'name' => 'Fred Obar',
-    'funds' => '20'
+    'funds' => 20
     })
 
   customer1.save()
 
   customer2 = Customer.new({
     'name' => 'Toby Lerone',
-    'funds' => '15'
+    'funds' => 15
     })
 
   customer2.save()
 
   film1 = Film.new({
     'title' => 'Rambo Last Blood',
-    'price' => '10'
+    'price' => 10
     })
 
   film1.save()
 
   film2 = Film.new({
-    'title' => 'Once Upon a Time in Hollywood'
-    'price' => '10'
+    'title' => 'Once Upon a Time in Hollywood',
+    'price' => 10
     })
 
   film2.save()
 
   ticket1 = Ticket.new({
-    'customer_id' =>'customer1.id',
-    'film_id' => 'film1.id'
+    'customer_id' => customer1.id,
+    'film_id' => film1.id
     })
 
   ticket2 = Ticket.new({
-    'customer_id' =>'customer1.id',
-    'film_id' => 'film2.id'
+    'customer_id' => customer1.id,
+    'film_id' => film2.id
     })
 
   ticket3 = Ticket.new({
-    'customer_id' =>'customer2.id',
-    'film_id' => 'film1.id'
+    'customer_id' => customer2.id,
+    'film_id' => film1.id
     })
 
   ticket4 = Ticket.new({
-    'customer_id' =>'customer2.id',
-    'film_id' => 'film2.id'
+    'customer_id' => customer2.id,
+    'film_id' => film2.id
     })
 
   ticket1.save()
